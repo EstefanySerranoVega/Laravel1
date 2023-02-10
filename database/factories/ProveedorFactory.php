@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Categoria>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\proveedor>
  */
-class CategoriaFactory extends Factory
+class ProveedorFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,7 +18,8 @@ class CategoriaFactory extends Factory
     {
         return [
             //
-            'nombre_categoria' => $this->faker->name()
+            'empresa_proveedor' => $this->faker->company(),
+            'correo_proveedor' => $this->faker->companyEmail()
         ];
     }
 }

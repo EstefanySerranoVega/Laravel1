@@ -14,19 +14,19 @@ return new class extends Migration
     public function up()
     {
         Schema::create('persona', function (Blueprint $table) {
-            $table->id();
+        
+           $table->id();
 
 
-            $table->string('nombre_persona',180);
-            $table->string('paterno_persona',80);
-            $table->string('materno_persona',80);
-            $table->string('telefono_persona',20);
-            $table->timestamp('telefono_verified_at')->nullable();
-            $table->string('codigo_producto')->unique();
-            $table->date('nacimiento_persona');
-            $table->string('estado_persona')->default('AC');
-            $table->timestamps();
-
+           $table->string('nombre_persona',180);
+           $table->string('paterno_persona',80);
+           $table->string('materno_persona',80);
+           $table->string('telefono_persona',20);
+           $table->string('genero_persona',20);
+           $table->timestamp('telefono_verified_at')->nullable();
+           $table->date('nacimiento_persona');
+           $table->string('estado_persona')->default('AC');
+           $table->timestamps();
      });
     }
 

@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Categoria>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\tipo_pago>
  */
-class CategoriaFactory extends Factory
+class TipoPagoFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,7 +18,7 @@ class CategoriaFactory extends Factory
     {
         return [
             //
-            'nombre_categoria' => $this->faker->name()
+            'nombre_tp' => $this->faker->creditCardType()
         ];
     }
 }

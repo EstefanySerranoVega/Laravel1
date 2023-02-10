@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Categoria>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Rol>
  */
-class CategoriaFactory extends Factory
+class RolFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,7 +18,8 @@ class CategoriaFactory extends Factory
     {
         return [
             //
-            'nombre_categoria' => $this->faker->name()
+
+           // 'nombre_rol' => $this
         ];
     }
 }
