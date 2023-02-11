@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Proveedor;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,6 +15,9 @@ class ProveedorFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+     protected $model = Proveedor::Class;
+
     public function definition()
     {
         return [

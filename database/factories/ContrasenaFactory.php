@@ -2,14 +2,14 @@
 
 namespace Database\Factories;
 
-use App\Models\TipoPago;
+use App\Models\Contrasena;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\tipo_pago>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Contrasena>
  */
-class TipoPagoFactory extends Factory
+class ContrasenaFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,13 +17,12 @@ class TipoPagoFactory extends Factory
      * @return array<string, mixed>
      */
 
-     protected $model = TipoPago::Class;
-     
+     protected $model = Contrasena::Class;
+
     public function definition()
     {
         return [
-            //
-            'nombre_tp' => $this->faker->creditCardType()
+            
         ];
     }
 }

@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Database\Eloquent\Casts\Atttribute;
 
-class Cliente_producto extends Model
+class AlmacenProducto extends Model
 {
     use HasFactory;
 
-    protected $table = 'cliente_producto';
+    protected $table = 'almacen_producto';
 }

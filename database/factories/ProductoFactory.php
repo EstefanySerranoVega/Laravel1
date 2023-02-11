@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\Factories;
+use App\Models\Producto;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -14,6 +15,9 @@ class ProductoFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+    protected $model = Producto::Class;
+
     public function definition()
     {
         return [

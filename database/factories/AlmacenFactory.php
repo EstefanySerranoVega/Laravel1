@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Almacen;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,6 +16,9 @@ class AlmacenFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+protected $model = Almacen::Class;
+
     public function definition()
     {
         return [

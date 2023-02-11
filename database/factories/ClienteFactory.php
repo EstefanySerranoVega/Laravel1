@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Cliente;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,6 +16,9 @@ class ClienteFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+     protected $model = Cliente::Class;
+
     public function definition()
     {
         return [

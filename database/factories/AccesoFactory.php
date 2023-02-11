@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Acceso;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,6 +16,9 @@ class AccesoFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+     protected $model = Acceso::Class;
+
     public function definition()
     {
         return [

@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Rol;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,6 +16,9 @@ class RolFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+     protected $model = Rol::Class;
+     
     public function definition()
     {
         return [
