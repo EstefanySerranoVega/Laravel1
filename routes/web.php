@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StoreController;
 
 /*
@@ -14,10 +15,7 @@ use App\Http\Controllers\StoreController;
 |
 */
 
-Route::get('/', function () {
-    //return view('welcome');
-    return 'Estás en la página principal de prueba';
-});
+Route::get('/', [HomeController::Class,'index']);
 
 
 Route::get('/store', [StoreController::Class,'index']);

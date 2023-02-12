@@ -31,8 +31,8 @@ class DatabaseSeeder extends Seeder
             //UsuarioSeeder::Class,
             //ContrasenaSeeder::Class
             //ProductoSeeder::Class,
-            PublicidadSeeder::Class,
-            SliderSeeder::Class
+            //PublicidadSeeder::Class,
+            //SliderSeeder::Class
         ]);
     }
 }

@@ -105,6 +105,15 @@ menu {
 button:hover {
     box-shadow: 0px 0px 5px 0px #0008;
 }
+.section-productos{
+    width:100%;
+    display:grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem9;
+}
+.producto{
+    width
+}
 
     </style>
 </head>
@@ -156,18 +165,29 @@ button:hover {
         </ul>
     </menu>
     </div>
- @if($productos_store)
- <h1>hay productos, ahre</h1>
 
-        @forelse($productos_store as $producto)
-        {{$producto }} </br>
-        @empty
-        <h3>no hay productos disponibles</h3>
-        @endforelse
-    
- @else
-<h1>no hay productos  </h1>
- @endif
+    <div class="container-gral">
+
+  <div class="section-productos">
+    @if($productos_store)
+    <h1>hay productos, ahre</h1>
+   
+           @forelse($productos_store as $producto)
+           <div class="producto">
+               {{$producto->nombre_producto }}
+               <img src="{{$producto->img_producto}}" alt="">
+           </div>
+           @empty
+           <h3>no hay productos disponibles</h3>
+           @endforelse
+       
+    @else
+   <h1>no hay productos  </h1>
+    @endif
+  {{$productos_store->links()}}
+   
+  </div>
+    </div>
 
 
 </body>

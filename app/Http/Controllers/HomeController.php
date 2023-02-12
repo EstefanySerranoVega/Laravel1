@@ -6,18 +6,18 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Producto;
 
-class StoreController extends Controller
+class HomeController extends Controller
 {
     //
 
     public function index(){
-       // return 'estás en la tienda, ahre';
+
+        
        $productos = Producto::paginate();
-       return view('store', ['productos_store' => $productos]);
+        return view('home', ['productos_store' => $productos]);
     }
-
-    public function show($producto){
-
+    public function chale(){
+        
+        return 'asd';
     }
-
 }
