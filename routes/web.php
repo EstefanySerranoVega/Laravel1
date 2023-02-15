@@ -17,10 +17,10 @@ use App\Http\Controllers\StoreController;
 
 Route::get('/', [HomeController::Class,'index']);
 
-
-Route::get('/store', [StoreController::Class,'index']);
-
-Route::get('/store/{producto}', function($producto){
-    return "estás viendo el producto $producto";
+Route::controller(StoreController::Class)->group(function(){
+    Route::get('/store', 'index')->name('store.index');
+    Route::get('/store/shopcart/{producto}','shopcart')->name('store.shopcart');
+    Route::get('/store/{producto}', 'show')->name('store.show');
 });
+
 

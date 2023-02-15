@@ -14,7 +14,7 @@ class HomeController extends Controller
 
         
        $productos = Producto::paginate();
-        return view('home', ['productos_store' => $productos]);
+        return view('home',['productos_store' => $productos]);
     }
     public function chale(){
         
