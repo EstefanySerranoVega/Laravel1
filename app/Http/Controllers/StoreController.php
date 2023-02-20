@@ -13,18 +13,19 @@ class StoreController extends Controller
     public function index(){
        // return 'estás en la tienda, ahre';
        $productos = Producto::paginate();
-       return view('store/store', ['productos_store' => $productos]);
+       return view('store.index');
     }
 
     public function show($id){
         $producto = Producto::find($id);
         //return $producto;
-       return view('store/producto',['producto' => $producto]);
+       return view('store.show',['producto' => $producto]);
     }
 
-    public function shopcart($producto){
-       // return $producto;
-        return view('store/shopcart' , compact('item'));
+    public function shopcart($id){
+        
+        $producto = Producto::find($id);
+        return view('store.shopcart' ,compact('producto'));
     }
 
 }

@@ -24,7 +24,7 @@ class AlmacenProductoFactory extends Factory
         return [
             //
             'usuario_id' => 1,
-            'producto_id' => $this->faker->number(),
+            'producto_id' => $this->faker->numberBetween($min=1,$max=50),
             'proveedor_id' => $this->faker->NumberBetween($min = 1, $max = 10),
             'almacen_id' => 1,
             'pventa_ap' => $this->faker->randomFloat( $min = 20, $max = 200),

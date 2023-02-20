@@ -120,7 +120,7 @@ button:hover {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 2rem;
 }
-.producto{
+.card_producto{
     height:22rem;
     display:flex;
     flex-wrap:wrap;
@@ -143,6 +143,9 @@ button:hover {
     width: 100%;
     height: 100%;
     
+}
+.producto a{
+    color:red;
 }
     </style>
 </head>

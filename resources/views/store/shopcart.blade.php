@@ -15,8 +15,8 @@
         <form action="">
            
             <div class="item">
-            <img src="" alt="" class="img-item">
-            <label for="name-item">nombre del item</label>
+            <img src="{{$producto->img_producto}}" alt="" class="img-item">
+            <label for="name-item">{{$producto->nombre_producto}}</label>
             <input type="number" name="cant-item" id="cant-item" value="1">
             <label for="precio-item">precio.bs</label>
             <label for="total" name="total" id="total">Total:</label>
@@ -31,7 +31,7 @@
             </div>
            
         </form>
-        
+        <label for="">{{$producto}}</label>
   <div class="footer-options">
   <div class="button-back">
             <a href="">  

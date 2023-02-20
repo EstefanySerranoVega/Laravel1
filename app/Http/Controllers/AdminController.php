@@ -4,16 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Producto;
 
-class HomeController extends Controller
+class AdminController extends Controller
 {
     //
-
     public function index(){
-
-       $productos = Producto::paginate();
-        return view('home');
+        
     }
-    
 }

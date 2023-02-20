@@ -53,8 +53,6 @@
             <h1>hay productos, ahre</h1>
             <div class="container_productos">
             
-          
-            
             <a href="">
                 <div class="producto">
                     {{$producto->nombre_producto }}
@@ -64,7 +62,6 @@
                     </div>
                 </div>
             </a>
-      
             
             @else
             <h1>no hay productos  </h1>

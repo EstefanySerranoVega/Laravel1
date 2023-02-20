@@ -14,14 +14,17 @@
 
 @forelse($productos_store as $producto)
 
-<a href="{{route('store.show',$producto->id)}}">
+<a href="{{route('store.show',$producto->id)}}" class="card_producto">
     <div class="producto">
-        {{$producto->nombre_producto }}
-        <div class="img">
-        <img src="{{$producto->img_producto}}" alt="">
-        </div>
-        <label for="">asd: {{$producto->id}}</label>
-   
+        <form action="{{route('store.shopcart', $producto->id)}}" method="get">
+            <label for="">{{$producto->nombre_producto }}</label>
+            <div class="img">
+            <img src="{{$producto->img_producto}}" alt="">
+            </div>
+            <label for="">asd: {{$producto->id}}</label>
+   <button type="submit">Agregar</button>    
+        </form>
+        
     </div>
 </a>
 @empty

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StoreController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +16,31 @@ use App\Http\Controllers\StoreController;
 |
 */
 
-Route::get('/', [HomeController::Class,'index']);
+Route::get('/', [HomeController::Class,'index'])->name('home');
 
 Route::controller(StoreController::Class)->group(function(){
     Route::get('/store', 'index')->name('store.index');
     Route::get('/store/shopcart/{producto}','shopcart')->name('store.shopcart');
     Route::get('/store/{producto}', 'show')->name('store.show');
+    Route::get('/store/{categoria}', 'category')->name('store.category');
 });
+
+Route::controller(CustomerController::Class)->group(function(){
+    Route::get('/customer/login','index')->name('customer.login');
+    Route::get('/customer/singup','singup')->name('customer.singup');
+    Route::post('/customer/login','authenticate')->name('customer.authenticate');
+
+});
+
+Route::controller(AdminController::Class)->group(function(){
+    Route::get('/admin/dashboard','dashboard')->name('admin.dashboard');
+});
+
+/*
+
+Route::get('/customer/singup',[CustomerController::Class,'singup']);
+Route::get('/customer/login',[CustomerController::Class,'index']);
+
+*/
 
 

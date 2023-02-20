@@ -12,4 +12,12 @@ class Contrasena extends Model
     use HasFactory;
 
     protected $table = 'contrasena';
+
+    protected function contrasena():attibute{
+        return new attribute(
+
+            get:fn($value) => md5($value),
+            set:fn($value) => md5($value)
+        );
+    }
 }
