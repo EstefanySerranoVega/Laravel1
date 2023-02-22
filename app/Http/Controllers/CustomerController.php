@@ -25,18 +25,25 @@ class CustomerController extends Controller
     }
 
     public function authenticate(Request $request){
-        
+        $request->validate([
+            'name' => 'required',
+            'paterno' => 'required',
+            'materno' => 'required',
+            'username' => 'required',
+            'password' => 'required'
+        ]);
         $persona = new Persona();
         $usuario = new Usuario();
         $cliente = new Cliente();
         $contrasena = new Contrasena();
 
-        $persona->name_persona = $request->name;
+        $persona->nombre_persona = $request->name;
         $persona->paterno_persona = $request->paterno;
         $persona->materno_persona = $request->materno;
+        $persona->genero_persona = $request->genero;
         $persona->telefono_persona = $request->telefono;
         $persona->nacimiento_persona = $request->fnac;
-        $persona->save();
+         if ($persona->save()){
 
         $cliente->persona_id = $persona->id;
         $cliente->email_cliente = $request->email;
@@ -53,13 +60,25 @@ class CustomerController extends Controller
         $contrasena->contrasena = $request->contrasena;
         $contrasena->save();
 
-        
+         }else{
+            return 'no se pudo guardar';
+         }
         //return $request;
        $productos = Producto::paginate();
        
         return redirect()->route('home');
 
     }
-    
+    public function profile($id){
+        $usuario = Usuario::find($id);
+        return view('customer.profile');
+    }
+    public function show(){}
+
+    public function edit(){}
+
+    public function update(){
+
+    }
 
 }

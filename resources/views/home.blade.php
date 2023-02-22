@@ -8,11 +8,11 @@
 </div>
 
 <div class="section-productos">
-@if($productos_store)
+@if($productos)
 <h1>hay productos, ahre</h1>
 <div class="container_productos">
 
-@forelse($productos_store as $producto)
+@forelse($productos as $producto)
 
 <a href="{{route('store.show',$producto->id)}}" class="card_producto">
     <div class="producto">
@@ -36,7 +36,7 @@
 @endif
 </div>
 
-{{$productos_store->links()}}
+{{$productos->links()}}
 
 </div>
 @endsection

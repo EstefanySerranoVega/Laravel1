@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,11 +30,18 @@ Route::controller(CustomerController::Class)->group(function(){
     Route::get('/customer/login','index')->name('customer.login');
     Route::get('/customer/singup','singup')->name('customer.singup');
     Route::post('/customer/login','authenticate')->name('customer.authenticate');
+    Route::get('/customer/profile/{id}','profile')->name('customer.profile');
+    Route::get('/customer/show','show')->name('customer.show');
+    Route::post('/customer/edit','edit')->name('customer.edit');
+    Route::put('/custome/update','update')->name('customer.update');
 
 });
 
 Route::controller(AdminController::Class)->group(function(){
     Route::get('/admin/dashboard','dashboard')->name('admin.dashboard');
+    Route::get('/admin/almacen/index','index')->name('almacen.index');
+    Route::get('/admin/almacen/productos','productos')->name('almacen.productos');
+   // Route::get('/admin/almacen/')->name();
 });
 
 /*

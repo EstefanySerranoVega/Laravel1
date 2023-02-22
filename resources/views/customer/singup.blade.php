@@ -12,11 +12,26 @@
             @csrf
             <h1>Sing up  </h1>
             <label for="">Nombre:</label>
-            <input type="text" name="name" id="">
+            <input type="text" name="name" id="" value="{{old('name')}}">
+            @error('name')
+                <br>
+                <small>*{{$message}}</small>
+                <br>
+            @enderror
             <label for="">Apellido Paterno:</label>
-            <input type="text" name="paterno" id="">
+            <input type="text" name="paterno" id="" value="{{old('paterno')}}">
+            @error('paterno')
+                <br>
+                <small>*{{$message}}</small>
+                <br>
+            @enderror
             <label for="">Apellido Materno:</label>
-            <input type="text" name="materno" id="">
+            <input type="text" name="materno" id="" value="{{old('materno')}}">
+            @error('materno')
+                <br>
+                <small>*{{$message}}</small>
+                <br>
+            @enderror
             <label for="">Genero:</label>
             <select name="genero" id="">
                 <option value="">Femenino</option>
@@ -24,17 +39,27 @@
                 <option value="">Prefiero no decirlo</option>
             </select>
             <label for="">Telefono</label>
-            <input type="text" name="telefono" id="">
+            <input type="text" name="telefono" id="" value="{{old('telefono')}}">
             <label for="">Correo:</label>
-            <input type="email" name="email" id="">
+            <input type="email" name="email" id="" value="{{old('email')}}">
             <label for="">Fecha de nacimiento</label>
-            <input type="date" name="fnac" id="">
+            <input type="date" name="fnac" id="" value="{{old('fnac')}}">
             <label for="">Nombre de usuario:</label>
-            <input type="text" name="username" id="">
+            <input type="text" name="username" id="" value="{{old('username')}}">
+            @error('username')
+                <br>
+                <small>*{{$message}}</small>
+                <br>
+            @enderror
             <label for="">Dirección:</label>
-            <input type="text" name="direccion" id="">
+            <input type="text" name="direccion" id="" value="{{old('direccion')}}">
             <label for="">Contraseña:</label>
             <input type="password" name="contrasena" id="">
+            @error('password')
+                <br>
+                <small>*{{$message}}</small>
+                <br>
+            @enderror
 
             <input type="submit" value="Registrarse">
         </form>

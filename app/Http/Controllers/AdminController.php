@@ -11,4 +11,11 @@ class AdminController extends Controller
     public function index(){
         
     }
+    public function administrar(){
+
+    }
+    public function almacen(){
+
+    }
+    public function productos(){}
 }
